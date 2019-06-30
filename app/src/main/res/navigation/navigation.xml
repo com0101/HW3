@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation"
+            app:startDestination="@id/home">
+    <fragment
+            android:id="@+id/home"
+            android:name="com.example.hw3.Home"
+            android:label="Home"
+            tools:layout="@layout/home">
+        <action android:id="@+id/action_home_to_profileEdit" app:destination="@id/profileEdit"/>
+    </fragment>
+    <fragment
+            android:id="@+id/profileEdit"
+            android:name="com.example.hw3.ProfileEdit"
+            android:label="ProfileEdit"
+            tools:layout="@layout/profile_edit">
+        <action android:id="@+id/action_profileEdit_to_home" app:popUpTo="@id/home" app:popUpToInclusive="true"/>
+    </fragment>
+
+</navigation>

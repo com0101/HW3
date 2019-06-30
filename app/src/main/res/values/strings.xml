@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">HW3</string>
+    <string name="title_profile">Profile</string>
+    <string name="nickname_title">Nick Name</string>
+    <string name="name_title">Name</string>
+    <string name="name_text">Zhi-Lun</string>
+    <string name="nickname_text">Sophie</string>
+    <string name="how_about_me_title">How about me</string>
+    <string name="how_about_me_text">Hi my name is Zhi-Lun Wang. I am a fresh graduate, I am a Media
+        Design Department student.</string>
+    <string name="save_button">SAVE</string>
+    <string name="what_your_name"> your name</string>
+    <string name="what_yuor_nickname"> your nickname</string>
+    <string name="how_about_you_text">How about you</string>
+</resources>
