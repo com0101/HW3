@@ -15,26 +15,26 @@ class ProfileEdit:Fragment() {
 
     private lateinit var binding: ProfileEditBinding
     //private  var content : ContentData = ContentData(0, "","","")
-    var content =ContentData(0,"","","" )
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding : ProfileEditBinding=
             DataBindingUtil.inflate(inflater, R.layout.profile_edit, container, false)
 
         binding.content=content
-        //val application = requireNotNull(this.activity).application
-        //val dataSource = ContentDatabase.getInstance(application).contentdao
-      //  val viewModelFactory = ProViewModelFactory(dataSource, application)
-       // val proViewModel =
-         //   ViewModelProviders.of(
-             //   this, viewModelFactory).get(ProViewModel::class.java)
+        val application = requireNotNull(this.activity).application
+        val dataSource = ContentDatabase.getInstance(application).contentdao
+        val viewModelFactory = ProViewModelFactory(dataSource, application)
+        val proViewModel =
+          ViewModelProviders.of(
+               this, viewModelFactory).get(ProViewModel::class.java)
        // binding.proViewModel =proViewModel
-        //binding.setLifecycleOwner(this)
+        binding.setLifecycleOwner(this)
        //load()
 
 
         binding.savebutton.setOnClickListener { view: View ->
-            save()
+           // save()
 
         }
 

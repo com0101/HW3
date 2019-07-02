@@ -7,14 +7,14 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "profile_content_table")
 data class ContentData(
     @PrimaryKey(autoGenerate = true)
-    var profileid : Long,
+    var profileid : Long=0L,
 
     @ColumnInfo(name = "your_name")
-    var name : String,
+    var name : String="",
 
     @ColumnInfo(name = "your_nickname")
-    var nickname : String,
+    var nickname : String="",
 
     @ColumnInfo(name = "about_you")
-    var aboutyou : String
+    var aboutyou : String=""
 )

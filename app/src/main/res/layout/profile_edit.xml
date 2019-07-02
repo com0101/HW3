@@ -4,8 +4,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
-                name="content"
-                type="com.example.hw3.ContentData"/>
+                name="proViewModel"
+                type="com.example.hw3.ProViewModel"/>
     </data>
     <ScrollView
             android:layout_width="match_parent"
@@ -93,7 +93,7 @@
                     android:textAlignment="center" android:textColorLink="@color/colorPrimary"
                     app:layout_constraintBottom_toTopOf="@+id/nametextView" app:layout_constraintVertical_bias="0.0"
                     android:layout_marginBottom="16dp"
-                    android:text="@={content.name}"/>
+                    />
             <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -107,7 +107,7 @@
                     android:textAlignment="center" app:layout_constraintTop_toBottomOf="@+id/nickname_title"
                     app:layout_constraintBottom_toTopOf="@+id/nicknametext" android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
-                    android:text="@={content.nickname}"/>
+                    />
             <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -121,7 +121,7 @@
                     app:layout_constraintHorizontal_bias="1.0"
                     android:layout_marginBottom="16dp"
                     app:layout_constraintBottom_toTopOf="@+id/aboutyou"
-                    android:text="@={content.aboutyou}"/>
+                    />
             <Button
                     android:text="@string/save_button"
                     android:layout_width="0dp"
@@ -130,7 +130,8 @@
                     android:layout_marginEnd="8dp"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
                     app:layout_constraintTop_toBottomOf="@+id/aboutyou"
-                    android:layout_marginBottom="16dp" app:layout_constraintBottom_toBottomOf="parent"/>
+                    android:layout_marginBottom="16dp" app:layout_constraintBottom_toBottomOf="parent"
+                    android:Onclick="@{ () -> proViewModel.onSaveWriting() }"/>
             <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
