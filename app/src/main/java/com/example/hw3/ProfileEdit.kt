@@ -28,7 +28,7 @@ class ProfileEdit:Fragment() {
         val proViewModel =
           ViewModelProviders.of(
                this, viewModelFactory).get(ProViewModel::class.java)
-       // binding.proViewModel =proViewModel
+        binding.proViewModel =proViewModel
         binding.setLifecycleOwner(this)
        //load()
 
